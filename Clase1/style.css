@@ -1,0 +1,8 @@
+.titulo{
+    box-sizing: border-box; /*con esto fuerzo a que el rectangulo mida 250px como se definio, porque sin esta propiedad suma tambien el ancho del borde (5 izq + 5 der) y da 260px*/
+    color: lightblue;
+    width: 250px;
+    border-width: 5px;
+    border-color: red;
+    border-style: double;
+}
