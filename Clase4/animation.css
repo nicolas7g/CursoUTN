@@ -1,0 +1,65 @@
+h1{
+    animation: cambioColor 5s  3 ;
+    animation-timing-function: cubic-bezier(.35,1.22,.5,-0.7);/*https://cubic-bezier.com/#.35,1.22,.5,-0.7*/
+    animation-fill-mode: forwards;/*una vez que termina la animacion se queda en su estado final*/
+    animation-direction: alternate;
+}
+
+.contenedor{
+    border: 2px solid blue;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px; /*afecta a su hijo directo, es decir a la clase padre*/
+    perspective-origin: top;
+}
+
+.padre{
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    transform: rotateY(30deg);
+    animation: girar 20s  infinite;
+    transform-style: preserve-3d;/*hace que sus elementos hijos hereden la perspectiva definida en la clase contenedor*/
+}
+
+
+.hijo{
+
+    background-color: blueviolet;
+    width: 300px;
+    height: 300px;
+    font-size: 40px;
+    transform: rotateY(90deg);
+
+}
+
+@keyframes girar{
+
+    4%{
+        transform: rotateY(10deg);
+    }
+    23%{
+        transform: rotateY(50deg);
+    }
+    75%{
+        transform: rotateY(90deg);
+    }
+    100%{
+        transform: rotateY(150deg);
+    }
+}
+
+    @keyframes cambioColor{
+ from{
+    background-color: cornflowerblue;
+ }
+ to{
+    background-color: yellow;
+    font-size: 70px;
+ 
+}
+
+}

@@ -1,0 +1,32 @@
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  color: white;
+  perspective: 800px;
+  perspective-origin: top ;
+}
+
+.cubo {
+  background-color: brown;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.uno:active { /*se activa cuando mantengo el boton izq presionado*/
+  transform: rotateY(-85deg);
+  
+  transition: transform 1s; /*el transition necesita el nombre la propiedad donde aplicar la transicion, en este caso la propiedad transform*/
+}
+
+.dos{
+  transform: scaleY(.2);
+}
+
+.tres:hover{
+  transform: translateZ(-100px);
+ /* transition: transform 5s;*/
+}
