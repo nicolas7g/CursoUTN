@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag&Drop</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 id="titulo"  draggable="true">Drag & Drop</h1>
+    
+    <div class="zona-destino" ondragenter="eventoDragEnter()" ondragleave="eventoDragLeave()" ondragover="eventoDragOver(event)" ondrop="dropArchivo(event)">
+        arrastrar elemento aqui...
+    </div>
+
+    <img src="./imagen.jpg" alt="" >
+
+
+
+    <script src="./d&d.js"> </script>
+</body>
+</html>
