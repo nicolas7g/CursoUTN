@@ -51,7 +51,7 @@ caja_dest.forEach(caja => {
     })
     caja.addEventListener("drop", (e)=>{
         console.log("se ejecuto el drop");
-        let info=e.dataTransfer.getData("text/html");
+        const info=e.dataTransfer.getData("text/html");
         const caja_origen = document.getElementById(e.dataTransfer.getData("Text"));
 
         caja.innerHTML = info;
