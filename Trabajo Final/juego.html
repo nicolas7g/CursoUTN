@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Final</title>
+    <link rel="stylesheet" href="./juego.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="monitor__img">
+            
+            <a href="./index.html">
+
+               
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="80" viewBox="0 0 250 100">
+
+                    <!-- monitor--> 
+                    <rect class="mon_tec1" x="45" y="-15"  width="84" height="49" rx="5" fill="#F0E9D2"></rect>
+                    <rect class="mon_tec2" x="52" y="-8" width="70" height="35" rx="5" fill="#495579"></rect>
+            
+                <!-- teclado--> 
+                    <polygon class="mon_tec1" points="65 45 ,110 45,144 74,30 74" fill="#F0E9D2"></polygon>
+                    <polygon class="mon_tec2" points="70 51 ,105 51,127 68,48 68" fill="#495579"></polygon>
+            
+                </svg>
+            </a>
+        </div>        
+        <div class="menu">
+            <button class="nav__button hist">HISTORIA</button>
+            <button class="nav__button jug">JUGUEMOS</button>
+        </div>
+    </div>
+    
+    <div class="header" >
+        <h1> JUGUEMOS UN POCO</h1>
+    </div>
+    
+
+    <div class="main">
+        
+        <h2 class="main_text">Armemos el rompecabezas y veamos que imagen es...</h2>
+        <section class="juego">
+            <div class="cajas_destino" >
+                <div class="caja_dest">
+                    <p>Arrastre y suelte la imágene aquí</p>
+                </div>
+                <div class="caja_dest">
+                    <p>Arrastre y suelte la imágene aquí</p>
+                </div>
+                <div class="caja_dest">
+                    <p>Arrastre y suelte la imágene aquí</p>
+                </div>
+            </div>
+
+            <div class="cajas_imagenes">
+                <div class="caja_img">
+                    <img id="imagen2" src="./images/rompe2.png" alt="imagen-rompecabezas">
+                </div>
+                <div class="caja_img">
+                    <img id="imagen1" src="./images/rompe1.png" alt="imagen-rompecabezas">
+                </div>
+                <div class="caja_img">
+                    <img id="imagen3" src="./images/rompe3.png" alt="imagen-rompecabezas">
+                </div>
+            </div>
+ 
+        </section>
+        <button class="reiniciar">Reiniciar</button>
+    </div>
+
+<script src="./juego.js"></script>
+</body>
+</html>

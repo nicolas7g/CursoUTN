@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(24, 28, 48);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*----------- BARRA DE NAVEGACION-----------*/
+.nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    
+}
+.menu{
+    display: flex;
+    flex:0.3;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.mon_tec1{
+    opacity: 0;
+    animation: mover 1s linear 1 forwards ;
+}  
+
+.mon_tec2{
+    opacity: 0;
+    animation: mover 1s linear 1s 1 forwards ;
+} 
+
+   @keyframes mover {
+    0%{
+        transform: translate(0, 5px) ;
+        opacity: 0.1;
+        
+    }
+    50%{
+        transform: translate(0, 10px);
+        opacity: 0.5; 
+    }
+    100%{
+        transform: translate(0, 15px);
+        opacity: 1; 
+    }
+   }
+
+   
+.nav__button{
+    height: 42px;
+    background-color: #F0E9D2;
+    border-radius: 10px;
+    border: none;
+    font-weight: 300;
+    padding: 10px;
+    box-shadow: 2px 3px #678983;
+    font-size: 18px ;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hist{
+    width: 105px;
+}
+
+.jug{
+    width: 125px;
+}
+
+.nav__button:active{
+    transform: translate(2px,3px);
+    box-shadow: none;
+}
+
+/*-------------CABECERA---------------*/
+
+.header{
+    background: url('./images/codigo.jpg') 50% 0 fixed;
+    background-size: cover;
+    min-height: 620px;
+    color: #eeeeee;
+    font-size: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 100px;
+    flex-direction: column ;
+    align-items: center;
+   
+}
+
+.header > h1{
+    text-align: center;
+    text-shadow: 2px 2px gray, 8px 8px black;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 70px;
+}
+
+/*----------------MAIN----------------*/
+
+.cards{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;/*(row) alineacion vertical | (column) alineacion horizontal*/
+    padding: 40px 40px;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+
+
+h2{
+    text-shadow: 2px 2px black;
+    font-size: 50px;
+    color: #678983;
+    text-align: center;
+
+}
+
+.card >p{
+    color: #E6DDC4;
+    font-size: 20px;
+    
+}
+
+.card{
+    display:flex;
+    flex-direction: row ;
+    gap:20px;
+    padding: 100px 50px;
+    align-items: center;
+}
+
+
+.tit-1{
+    flex: 0.5;
+}
+
+.text-1{
+    flex: 0.5; 
+}
+
+.tit-2{
+    flex: 0.5;
+}
+
+.text-2{
+    flex: 0.5; 
+}
+
+.tit-3{
+    flex: 0.3;
+}
+
+.text-3{
+    flex: 0.7; 
+}
+
+
+
+.video__container{
+   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0;
+       
+       
+    }
+
+.container{
+    padding: 5px;
+    background-color: rgb(29, 27, 27);
+    width: 70%;
+    background-color: black;
+}
+
+
+video {
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+ 
+}
+.barra {
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botonera {
+    display: flex;
+    gap: 20px;
+}
+
+.botonesVideo {
+    box-shadow: 2px 3px #678983;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #E6DDC4;
+    color: #181D31;
+    font-weight: 300;
+}
+.botonesVideo:active{
+    transform: translate(2px,3px);
+    box-shadow: none;
+}
+
+
+#play, #pause {
+    width: 80px;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#showTime {
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+}
+
+/*----------FOOTER----------*/
+
+.footer{
+    background-color: #678983;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    color: #181D31;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.footer >h3{
+    font-size: 15px;
+}
+
+.footer > img{
+    background-color: rgba(0, 0, 0, 0);
+   max-height: 100px;
+   max-width: 130px;
+   flex: 0.1;
+}
+
+
+.texto__footer{
+    background-color: rgba(0, 0, 0, 0);
+    max-height: 100px;
+    
+}
+
+.prog{
+    text-align: center;
+    flex: 0.2;
+}
+.firma{
+    flex:0.7;
+    text-align: right;
+}
