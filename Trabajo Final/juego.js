@@ -1,7 +1,12 @@
 const but_historia = document.querySelector(".hist");
 const but_juego = document.querySelector(".jug");
 const svg_monitor = document.querySelector("svg");
-const but_reiniciar = document.querySelector(".but_reiniciar");
+const but_reiniciar = document.querySelector(".reiniciar");
+const caja_dest = document.querySelectorAll(".caja_dest");
+const caja_img = document.querySelectorAll(".caja_img");
+
+
+
 
 svg_monitor.addEventListener("click",()=>{
     console.log("click");
@@ -19,6 +24,48 @@ but_juego.addEventListener("click",()=>{
 } );
 
 but_reiniciar.addEventListener("click",()=>{
-    console.log("click");
+        window.location.reload();
    
 } );
+
+
+
+
+caja_img.forEach(caja => {
+    caja.addEventListener("dragover", (e)=>{
+        e.preventDefault();
+    })
+
+    caja.addEventListener('dragstart',(e)=>{
+        const imagen = caja.getElementsByTagName("img")[0];  
+
+        e.dataTransfer.setData("text/html",`<img src= '${imagen.src}'/>`);
+        e.dataTransfer.setData("Text",caja.id);
+    });
+})
+
+
+caja_dest.forEach(caja => {
+    caja.addEventListener("dragover", (e)=>{
+        e.preventDefault();
+    })
+    caja.addEventListener("drop", (e)=>{
+        console.log("se ejecuto el drop");
+        let info=e.dataTransfer.getData("text/html");
+        const caja_origen = document.getElementById(e.dataTransfer.getData("Text"));
+
+        caja.innerHTML = info;
+        
+        caja_origen.style.display = 'none';
+        e.dataTransfer.clearData("text/html");
+        e.dataTransfer.clearData("Text");
+    })
+})
+
+
+
+
+
+
+
+
